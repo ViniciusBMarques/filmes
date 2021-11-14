@@ -93,9 +93,13 @@ function Detail() {
         }}
       />
 
-      <ButtonLink onPress={() => setOpenLink(true)}>
-        <Feather name="link" size={24} color="#FFF" />
-      </ButtonLink>
+      {movie.homepage ? (
+        <ButtonLink onPress={() => setOpenLink(true)}>
+          <Feather name="link" size={24} color="#FFF" />
+        </ButtonLink>
+      ) : (
+        <></>
+      )}
 
       <Title numberOfLines={2}>{movie.title}</Title>
 
